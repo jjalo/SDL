@@ -12,6 +12,6 @@ Cmake -G "Visual Studio 12 Win64" ..
 5. Refresh & Open VS project in build directory
 6. Set quickescape as start project
 7. Build solution
-8. Copy required .dll files (SDL2 & TinyXML) from ./deps/lib to the running folder. Also the ./res folder must be in the same folder as the executable, otherwise it will crash. The location of the exe can apparently differ when running from inside VS or the build folder.
+8. Copy required .dll files from ./deps/lib to the running folder. Also the ./res folder must be in the same folder as the executable, otherwise it will crash. The location of the exe can apparently differ when running from inside VS or the build folder.
 
 *Note: Boost is in the default directory, this can be set in CMakeLists if it differs.
