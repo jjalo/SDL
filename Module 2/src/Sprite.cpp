@@ -81,7 +81,7 @@ float Sprite::GetHeight()
 	}
 	else
 	{
-		return destinationRect->h * scale.x;
+		return destinationRect->h * scale.y;
 	}
 }
 
