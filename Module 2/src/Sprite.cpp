@@ -65,11 +65,11 @@ float Sprite::GetWidth()
 {
 	if (sourceRect != NULL)
 	{
-		return sourceRect->w;
+		return sourceRect->w * scale.x;
 	}
 	else
 	{
-		return destinationRect->w;
+		return destinationRect->w * scale.x;
 	}
 }
 
@@ -77,11 +77,11 @@ float Sprite::GetHeight()
 {
 	if (sourceRect != NULL)
 	{
-		return sourceRect->h;
+		return sourceRect->h * scale.y;
 	}
 	else
 	{
-		return destinationRect->h;
+		return destinationRect->h * scale.x;
 	}
 }
 
@@ -102,12 +102,7 @@ void Sprite::Draw(GraphicsManager& gm)
 		destinationRect->h = GetHeight();
 	}
 	
-	if (fillScreen == false)
-	{
-		destinationRect->w = GetWidth() * scale.x;
-		destinationRect->h = GetHeight() * scale.y;
-	}
-	else
+	if (fillScreen)
 	{
 		destinationRect->w = GraphicsManager::SCREEN_WIDTH;
 		destinationRect->h = GraphicsManager::SCREEN_HEIGHT;

@@ -72,8 +72,8 @@ void Game::Play()
 	SDL_Texture* playerImage = graphicsManager->LoadTexture("res/Player0.png");
 
 	Sprite* splash = new Sprite(splashImage, true);
-	Sprite* cover  = new Sprite(coverImage, true);
-	Sprite* pages  = new Sprite(pagesImage, true);
+	Sprite* cover = new Sprite(coverImage, true);
+	Sprite* pages = new Sprite(pagesImage, true);
 
 	Sprite* player = new Sprite(playerImage, Vector2(2.0, 2.0), Vector2(97.0, 48.0), 16, 16);
 	Vector2 startPosition = Vector2(GraphicsManager::SCREEN_WIDTH / 2.0, 
